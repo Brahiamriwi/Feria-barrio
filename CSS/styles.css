@@ -60,7 +60,7 @@
   color: var(--color-blanco);
   text-align: center;
   overflow: hidden;
-  gap: 60px;
+  gap: 30px;
 }
 
 .header::before {
@@ -102,6 +102,57 @@
   letter-spacing: 1px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 10);
+}
+
+.header__social {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+.header__social-links {
+  position: relative;
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+.header__social-link {
+  font-size: 1.4em; /* Texto más grande */
+  color: var(--color-secundario); 
+  text-decoration: none;
+  font-family: var(--fuente-parrafos);
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+.header__social-link {
+  background-color: var(--color-primario); /* O usa otro color fijo */
+}
+/* Efecto al pasar el mouse */
+.header__social-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.1); 
+}
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .header__social-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*pa quitar el color azul*/
+.header__social-link:focus,
+.header__social-link:active {
+  outline: none;
+  color: var(--color-blanco);
 }
 
 .navigation {
