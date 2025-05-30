@@ -44,3 +44,41 @@
     transition: none !important;
   }
 }
+
+/* Estilos globales para el body */
+body {
+    min-height: 1000px; 
+    font-size: 100%; 
+    font-family: var(--fuente-parrafos), sans-serif;
+    color: var(--color-texto); 
+    background-color: var(--fondo-primario); 
+    line-height: 1.6; 
+    text-rendering: optimizeLegibility; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale; 
+}
+
+/* Configuramos el color de los enlaces */
+a {
+    color: var(--color-enlace);
+    transition: color 0.2s ease; 
+}
+
+
+a:hover,
+a:focus {
+    color: var(--color-enlace-hover);
+}
+
+/* Estilos para los encabezados */
+::selection {
+    background-color: var(--color-primario);
+    color: var(--fondo-primario); 
+}
+
+ img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+} 
+

@@ -5,10 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feria-Barrio</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    
-  
-</body>
+<body class="body">
+    <header class="header">
+        <div class="header__logo">
+            <a href="/" class="logo">Feria Local</a>
+        </div>
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="index.html" class="navigation__link navigation__link--active">Inicio</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="schedule.html" class="navigation__link">Horarios</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="food.html" class="navigation__link">Comida</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="crafts.html" class="navigation__link">Artesanías</a>
+                </li>
+                </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="fair-presentation">
+            <div class="fair-presentation__image-container">
+                <img src="assets/placeholder-neighborhood.jpg" alt="Imagen del barrio" class="fair-presentation__image">
+            </div>
+            <div class="fair-presentation__content">
+                <h1 class="fair-presentation__title">¡Bienvenido a la Feria Local de Medellín!</h1>
+                <p class="fair-presentation__description">
+                    Descubre la vibrante cultura y las tradiciones de nuestra comunidad en la Feria Local anual del Barrio Santa María. Únete a nosotros para una celebración del talento local, comida deliciosa y artesanías únicas.
+                </p>
+                <div class="fair-presentation__links">
+                    <a href="schedule.html" class="button">Ver Horarios</a>
+                    <a href="food.html" class="button button--secondary">Explorar Comida</a>
+                    <a href="crafts.html" class="button button--secondary">Descubrir Artesanías</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-us">
+            <h2 class="about-us__title">Acerca de la Feria</h2>
+            <p class="about-us__paragraph">
+                La Feria Local de Medellín es un evento anual dedicado a mostrar lo mejor de nuestra comunidad local. Desde platos tradicionales hasta productos hechos a mano y emocionantes presentaciones culturales, hay algo para que todos disfruten.
+            </p>
+            <p class="about-us__paragraph">
+                Ubicada en el municipio de Itagüí, la feria ofrece una maravillosa oportunidad para conectar con vecinos, apoyar a artesanos locales y experimentar la rica herencia de Antioquia.
+            </p>
+            </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copyright">2023 Feria Local de Medellín. Todos los derechos reservados.</p>
+        </footer>
+
+    </body>
 </html>
