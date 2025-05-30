@@ -1,0 +1,46 @@
+/* Variables y reset */
+:root {
+  --color-primario: #fcca29;
+  --color-primario-oscuro: #000;
+  --color-secundario: #ff5f4a;
+  --color-secundario-oscuro: #4b0000;
+  --color-blanco: #fff;
+  --fuente-titulos: 'Dancing Script', cursive;
+  --fuente-parrafos: 'Roboto', sans-serif;
+  --fondo-primario: #ebebebfa;
+  --fondo-secundario: #00130b;
+  --color-texto: #000;
+  --color-enlace: #bb0000;
+  --color-enlace-hover: #c26a05;
+  --color-borde: #002522;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primario: #f0f0f0;
+    --color-secundario: #181818;
+    --color-texto: #f0f0f0;
+    --fondo-primario: #333;
+    --fondo-secundario: #550000;
+  }
+}
+
+@media (prefers-contrast: high) {
+  :root {
+    --color-primario: #000;
+    --color-secundario: #fff;
+    --color-texto: #000;
+    --fondo-primario: #fff;
+    --fondo-secundario: #000;
+    --color-enlace: blue;
+    --color-enlace-hover: darkblue;
+  }
+}
+
+/* Desactivamos las animaciones si el usuario ha configurado el modo sin animación */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
