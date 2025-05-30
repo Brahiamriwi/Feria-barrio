@@ -8,7 +8,7 @@
   --fuente-titulos: 'Dancing Script', cursive;
   --fuente-parrafos: 'Roboto', sans-serif;
   --fondo-primario: #ebebebfa;
-  --fondo-secundario: #00130b;
+  --fondo-secundario: #09af32;
   --color-texto: #000;
   --color-enlace: #bb0000;
   --color-enlace-hover: #c26a05;
@@ -46,7 +46,7 @@
 }
 
 /* Estilos globales para el body */
-body {
+.body {
     min-height: 1000px; 
     font-size: 100%; 
     font-family: var(--fuente-parrafos), sans-serif;
@@ -59,7 +59,7 @@ body {
 }
 
 /* Configuramos el color de los enlaces */
-a {
+.a {
     color: var(--color-enlace);
     transition: color 0.2s ease; 
 }
@@ -76,9 +76,30 @@ a:focus {
     color: var(--fondo-primario); 
 }
 
- img {
+.img {
     max-width: 100%;
     height: auto;
     display: block;
 } 
 
+
+.header__tittle {
+  
+
+
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrado para móvil */
+  padding: 30px 40px; /* Padding ajustado para móvil */
+  background-color: #ffffff;
+  background-image: url('images/ballena.jpg');
+  background-size: cover; /* Ajustado a 'cover' para que siempre cubra el área */
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid var(--fondo-secundario);
+  position: relative;
+  min-height: 30vh; /* Altura ajustada para móvil */
+  overflow: hidden;
+  animation: movimientoFondo 5s ease-in-out infinite alternate;
