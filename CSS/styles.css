@@ -1,9 +1,9 @@
 /* Variables y reset */
 :root {
-  --color-primario: #fcca29;
+  --color-primario: #f1c226;
   --color-primario-oscuro: #000;
-  --color-secundario: #ff5f4a;
-  --color-secundario-oscuro: #4b0000;
+  --color-secundario: #5c970e;
+  --color-secundario-oscuro: #a1a102;
   --color-blanco: #fff;
   --fuente-titulos: 'Dancing Script', cursive;
   --fuente-parrafos: 'Roboto', sans-serif;
@@ -43,4 +43,294 @@
     animation: none !important;
     transition: none !important;
   }
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/ballena.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: var(--fuente-titulos);
+  padding: 30px;
+  min-height: 300px;
+  color: var(--color-blanco);
+  text-align: center;
+  overflow: hidden;
+  gap: 60px;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* nivel de oscurecimiento */
+  z-index: 0;
+}
+
+.header > * {
+  position: relative;
+  z-index: 1;
+}
+
+.header__title {
+  font-size: 2.5em;
+  margin: 0;
+  background-color: var(--color-primario);
+  padding: 5px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 30);
+  text-shadow: 2px 2px 4px rgba(9, 61, 33, 20);
+  color: var(--color-blanco);
+}
+
+.header__subtitle {
+  font-size: 1.1em;
+  margin: 0;
+  padding: 5px 15px;
+  color: var(--color-blanco);
+  border-radius: 20px;
+  font-weight: 300;
+  font-family: var(--fuente-parrafos);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 10);
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50px;
+  background: none; 
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__link {
+  font-size: 1.4em; /* Texto más grande */
+  color: var(--color-blanco); /* Usa color blanco o el que desees */
+  text-decoration: none;
+  font-family: var(--fuente-parrafos);
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+.navigation__link {
+  background-color: var(--color-secundario-oscuro); /* O usa otro color fijo */
+}
+
+/*pa quitar el color azul*/
+.navigation__link:focus,
+.navigation__link:active {
+  outline: none;
+  color: var(--color-blanco);
+}
+
+/* Efecto al pasar el mouse */
+.navigation__link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.1); 
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .navigation__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  font-family: var(--fuente-parrafos);
+  color: var(--color-texto);
+  background-color: var(--fondo-primario);
+  border-radius: 20px;
+}
+
+/* Sección de Presentación de la Feria */
+.fair-presentation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/nuqui.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: var(--fuente-titulos);
+  padding: 30px;
+  color: var(--color-blanco);
+  text-align: center;
+  overflow: hidden;
+  gap: 20px;
+}
+
+/* fondo oscuro */
+.fair-presentation::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.fair-presentation > * {
+    position: relative;
+    z-index: 2;
+}
+
+.fair-presentation__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    max-width: 2500px;
+    margin-bottom: 70px;
+}
+
+.fair-presentation__title {
+    font-family: var(--fuente-titulos);
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.fair-presentation__description {
+    font-family: var(--fuente-parrafos);
+    font-size: 1.6em;
+    line-height: 1.5;
+}
+
+
+.about-us {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/comida.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: var(--fuente-titulos);
+  padding: 30px;
+  min-height: 300px;
+  color: var(--color-blanco);
+  text-align: center;
+  overflow: hidden;
+  gap: 20px;
+}
+
+.about-us::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    z-index: 1;
+}
+
+.about-us__title {
+    font-family: var(--fuente-titulos);
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    color: var(--color-blanco); 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+}
+
+
+.about-us__paragraph {
+    color: var(--color-blanco); 
+    font-family: var(--fuente-parrafos);
+    font-size: 1.3em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5); 
+}
+.about-us__paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 2500px;
+    margin-bottom: 70px;
+}
+/* footer */
+.footer {
+    background-color: var(--color-secundario-oscuro); 
+    color: var(--color-blanco);
+    padding: 20px;
+    text-align: center;
+    font-family: var(--fuente-parrafos);
+    font-size: 0.9em;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .fair-presentation {
+        padding: 40px 15px;
+    }
+
+    .fair-presentation__title {
+        font-size: 2.5em;
+    }
+
+    .fair-presentation__description {
+        font-size: 1em;
+    }
+
+    .about-us {
+        padding: 40px 15px;
+    }
+
+    .about-us__title {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .fair-presentation__title {
+        font-size: 2em;
+    }
 }
