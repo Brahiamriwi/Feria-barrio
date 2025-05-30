@@ -8,7 +8,7 @@
   --fuente-titulos: 'Dancing Script', cursive;
   --fuente-parrafos: 'Roboto', sans-serif;
   --fondo-primario: #ebebebfa;
-  --fondo-secundario: #00130b;
+  --fondo-secundario: #09af32;
   --color-texto: #000;
   --color-enlace: #bb0000;
   --color-enlace-hover: #c26a05;
@@ -43,50 +43,4 @@
     animation: none !important;
     transition: none !important;
   }
-}
-
-h1{
-  text-align: center;
-  color: #f0f0f0;
-  font-size: 100px;
-}
-
-p{
-  text-align: center;
-  color: #f0f0f0;
-  font-size: 50px;
-}
-
-body{
-  background-color: #333;
-  background-repeat: no-repeat;
-}
-
-.carrusel{
-  margin-top: 100px;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: scroll;
-  
-}
-.elemento{
-  flex: 1 0 auto;
-  margin: 0 50px;
-  background-color: blue;
-  width: 500px;
-  height: 350px;
-}
-
-.elemento img{
-  width: 500px;
-  height: 350px;
-}
-
-.ingredientes{
-  width: 500px;
-  height: 350px;
-}
-
-.gen {
-  display: flex;
 }
